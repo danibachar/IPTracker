@@ -34,7 +34,7 @@ final class DataCollector {
             self?.ipReported.send(ips: ips) { [ weak self] error in
                 self?.isCollecting = false
                 print("Done")
-                DispatchQueue.main.asyncAfter(deadline: .now()+10.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now()+1000.0) {
                     self?.collectAndReport()
                 }
             }
