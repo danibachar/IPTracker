@@ -115,8 +115,8 @@ class RuleManager {
         let dbURL = directoryURL.appendingPathComponent("db.sqlite")
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
         
-        let store = try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: dbURL, options: options)
-        store.didAdd(to: coordinator)
+        let store = try? coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: dbURL, options: options)
+        store?.didAdd(to: coordinator)
         
         persistentStoreCoordinator = coordinator
         
