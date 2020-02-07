@@ -9,6 +9,8 @@
 import Foundation
 
 final class DataCollector {
+    static let instance = DataCollector()
+    
     private lazy var ipFetcher = IPFetcher()
     private lazy var ipReported = IPReporter()
     

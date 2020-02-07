@@ -48,7 +48,7 @@ final class IPReporter {
             switch res {
             case .failure(let error):
                 completion?(error)
-            case .success(let res):
+            case .success(_):
                 completion?(nil)
             }
             

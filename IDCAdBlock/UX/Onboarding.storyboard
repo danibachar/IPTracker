@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ga3-a2-iry">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,14 +19,14 @@
             <objects>
                 <viewController id="1jr-Tr-TDO" customClass="OBTutorialController" customModule="IDCAdBlock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13M-Ya-gHG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-Rp-sVM" customClass="GradientView" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CyM-I7-McC">
-                                        <rect key="frame" x="174.5" y="80.5" width="26" height="32"/>
+                                        <rect key="frame" x="287" y="81" width="26" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="26" id="6Ln-m4-xcx"/>
                                             <constraint firstAttribute="height" constant="32" id="XhR-41-XBf"/>
@@ -47,38 +45,38 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-sample" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-gO-OpG">
-                                <rect key="frame" x="75" y="209.5" width="225" height="80"/>
+                                <rect key="frame" x="188" y="211" width="225" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="ISc-Ee-wMN"/>
                                     <constraint firstAttribute="width" secondItem="tFe-gO-OpG" secondAttribute="height" multiplier="450:160" id="TUb-mY-fnd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Open an other app" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qki-A7-J8f">
-                                <rect key="frame" x="20" y="132.5" width="335" height="23.5"/>
+                                <rect key="frame" x="20" y="133" width="560" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Watch network activity" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="736-ol-7vi">
-                                <rect key="frame" x="20" y="176" width="335" height="23.5"/>
+                                <rect key="frame" x="20" y="177" width="560" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Create rules" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlP-bJ-y2T">
-                                <rect key="frame" x="20" y="309.5" width="335" height="23.5"/>
+                                <rect key="frame" x="20" y="311" width="560" height="24"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow or deny hosts, whitelist or blacklist apps, and inspect network traffic for all your apps." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZu-9i-VlO">
-                                <rect key="frame" x="22" y="333" width="333" height="56"/>
+                                <rect key="frame" x="22" y="335" width="558" height="38"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
                                 <color key="textColor" red="0.98979491649999995" green="1" blue="0.99625116729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5v-xf-hly" customClass="OutlinedButton" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="111.5" y="547" width="152" height="60"/>
+                                <rect key="frame" x="224" y="480" width="152" height="60"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NBn-5M-aeP"/>
@@ -101,7 +99,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJW-Wr-ATa">
-                                <rect key="frame" x="163" y="40" width="49" height="42.5"/>
+                                <rect key="frame" x="276" y="40" width="49" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="sift">
                                         <attributes>
@@ -153,27 +151,27 @@
             <objects>
                 <viewController id="LDb-Fa-bGg" customClass="OBNetworkPermissionsController" customModule="IDCAdBlock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Re2-hV-xEb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRv-AF-rJM" customClass="GradientView" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get started in just a few steps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH3-LJ-oph">
-                                        <rect key="frame" x="20" y="132.5" width="335" height="26"/>
+                                        <rect key="frame" x="20" y="133" width="560" height="26"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="22"/>
                                         <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="q0n-HD-BqE">
-                                        <rect key="frame" x="174.5" y="80.5" width="26" height="32"/>
+                                        <rect key="frame" x="287" y="81" width="26" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="98r-US-nKS"/>
                                             <constraint firstAttribute="width" constant="26" id="BUd-hY-ttV"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2i-Bb-4ds">
-                                        <rect key="frame" x="163" y="40" width="49" height="42.5"/>
+                                        <rect key="frame" x="276" y="40" width="49" height="43"/>
                                         <attributedString key="attributedText">
                                             <fragment content="sift">
                                                 <attributes>
@@ -207,22 +205,23 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLZ-oK-NT3" customClass="CustomView" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="20" y="184.5" width="335" height="149"/>
+                                <rect key="frame" x="20" y="165" width="560" height="135"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Networking Content Filtering" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6It-Mq-zTv">
-                                        <rect key="frame" x="10" y="63" width="315" height="21"/>
+                                        <rect key="frame" x="10" y="63" width="540" height="21"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="18"/>
                                         <color key="textColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sift uses a network content filter to show you network traffic in other apps. Sift never sends your network data anywhere." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b4-ff-5LY">
-                                        <rect key="frame" x="10" y="88" width="315" height="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b4-ff-5LY">
+                                        <rect key="frame" x="10" y="88" width="540" height="28"/>
+                                        <string key="text">IDCAdBlock uses a network content filter to show you network traffic in other apps. IDCAdBlock never sends your network data anywhere.</string>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9j7-cI-xE7">
-                                        <rect key="frame" x="143" y="16" width="51" height="31"/>
+                                        <rect key="frame" x="256" y="16" width="49" height="31"/>
                                         <color key="onTintColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -230,7 +229,7 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clH-ZW-EdL">
-                                        <rect key="frame" x="10" y="10" width="12.5" height="26"/>
+                                        <rect key="frame" x="10" y="10" width="13" height="26"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="22"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -263,22 +262,22 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eH0-NY-S8V" customClass="CustomView" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="20" y="373.5" width="335" height="135"/>
+                                <rect key="frame" x="20" y="340" width="560" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Push Notifications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-Cb-Srs">
-                                        <rect key="frame" x="10" y="63" width="315" height="21"/>
+                                        <rect key="frame" x="10" y="63" width="540" height="21"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="18"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push notifications are used only to show you network traffic in other apps in real-time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-Oc-8xS">
-                                        <rect key="frame" x="10" y="88" width="315" height="28"/>
+                                        <rect key="frame" x="10" y="88" width="540" height="14"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I2o-Np-7cf">
-                                        <rect key="frame" x="143" y="16" width="51" height="31"/>
+                                        <rect key="frame" x="256" y="16" width="49" height="31"/>
                                         <color key="onTintColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -286,7 +285,7 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52K-Wx-y4u">
-                                        <rect key="frame" x="10" y="10" width="12.5" height="26"/>
+                                        <rect key="frame" x="10" y="10" width="13" height="26"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="22"/>
                                         <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -350,6 +349,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Ga3-a2-iry" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FeY-Tv-uPj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

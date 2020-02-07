@@ -27,7 +27,7 @@ class NetCache {
         else {
             throw Errors.missingSharedGroupDirectory
         }
-
+        print(groupDirectory)
 //        self.cache = try Cache<NSString>(name: appIdentifier, directory: groupDirectory)
     }
 }

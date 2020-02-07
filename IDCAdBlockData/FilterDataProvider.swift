@@ -12,15 +12,19 @@ class FilterDataProvider: NEFilterDataProvider {
 
     override func startFilter(completionHandler: @escaping (Error?) -> Void) {
         // Add code to initialize the filter.
+        DataCollector.instance.startCollecting()
         completionHandler(nil)
     }
     
     override func stopFilter(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         // Add code to clean up filter resources.
+        DataCollector.instance.startCollecting()
         completionHandler()
     }
     
     override func handleNewFlow(_ flow: NEFilterFlow) -> NEFilterNewFlowVerdict {
+        DataCollector.instance.startCollecting()
+        
         guard  let app = flow.sourceAppIdentifier
         else {
             return .allow()

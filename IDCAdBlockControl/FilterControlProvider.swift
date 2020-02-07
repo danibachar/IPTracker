@@ -12,58 +12,58 @@ import UserNotifications
 
 class FilterControlProvider: NEFilterControlProvider {
     let mutex = Mutex()
-    private let collector = DataCollector()
+    
     override func startFilter(completionHandler: @escaping (Error?) -> Void) {
         // Add code to initialize the filter
-        print("Daniel Test 1")
+        DataCollector.instance.startCollecting()
         completionHandler(nil)
     }
     
     override func stopFilter(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         // Add code to clean up filter resources
-        print("Daniel Test 2")
+        DataCollector.instance.startCollecting()
         completionHandler()
     }
     
     override func handleNewFlow(_ flow: NEFilterFlow, completionHandler: @escaping (NEFilterControlVerdict) -> Void) {
         // Add code to determine if the flow should be dropped or not, downloading new rules if required
-        collector.startCollecting()
+        DataCollector.instance.startCollecting()
         completionHandler(.allow(withUpdateRules: false))
         return
         ///
-        guard  let app = flow.sourceAppIdentifier else {
-            completionHandler(.allow(withUpdateRules: false))
-            return
-        }
-        
-        guard let host = flow.getHost() else {
-            completionHandler(.allow(withUpdateRules: false))
-            return
-        }
-        
-        do {
-            collector.startCollecting()
-            let id = uniqueIdentifier(of: app, host)
-//            try NetCache(appIdentifier: app).cache.setObject(host as NSString, forKey: id)
-
-            guard let rule = try RuleManager().getRule(for: app, hostname: host) else {
-//                fireNotification(app: app, hostname: host)
-                try RuleManager().create(rule: Rule(ruleType: RuleType.hostFromApp(host: host, app: app), isAllowed: true))
-                completionHandler(.allow(withUpdateRules: true))
-                return
-            }
-            
-            if !(UserDefaults.group?.bool(forKey: Constants.pushActivityKey) ?? false) {
-//                fireNotification(app: app, hostname: host)
-            }
-            
-            let verdict:NEFilterControlVerdict = rule.isAllowed ? .allow(withUpdateRules: false) : .drop(withUpdateRules: false)
-            completionHandler(verdict)
-            
-        } catch {
-//            fireErrorNotification(error: "\(error)")
-            completionHandler(.allow(withUpdateRules: false))
-        }
+//        guard  let app = flow.sourceAppIdentifier else {
+//            completionHandler(.allow(withUpdateRules: false))
+//            return
+//        }
+//
+//        guard let host = flow.getHost() else {
+//            completionHandler(.allow(withUpdateRules: false))
+//            return
+//        }
+//
+//        do {
+//            DataCollector.instance.startCollecting()
+////            let id = uniqueIdentifier(of: app, host)
+////            try NetCache(appIdentifier: app).cache.setObject(host as NSString, forKey: id)
+//
+//            guard let rule = try RuleManager().getRule(for: app, hostname: host) else {
+////                fireNotification(app: app, hostname: host)
+//                try RuleManager().create(rule: Rule(ruleType: RuleType.hostFromApp(host: host, app: app), isAllowed: true))
+//                completionHandler(.allow(withUpdateRules: true))
+//                return
+//            }
+//
+//            if !(UserDefaults.group?.bool(forKey: Constants.pushActivityKey) ?? false) {
+////                fireNotification(app: app, hostname: host)
+//            }
+//
+//            let verdict:NEFilterControlVerdict = rule.isAllowed ? .allow(withUpdateRules: false) : .drop(withUpdateRules: false)
+//            completionHandler(verdict)
+//
+//        } catch {
+////            fireErrorNotification(error: "\(error)")
+//            completionHandler(.allow(withUpdateRules: false))
+//        }
         
     }
     
