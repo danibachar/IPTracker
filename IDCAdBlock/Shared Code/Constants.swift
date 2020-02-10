@@ -13,7 +13,7 @@ struct Constants {
     static let notificationCategory = "network_request_category"
     static let onboardingKey = "\(Bundle.main.bundleIdentifier!)"
     static let pushActivityKey = "push_activity_key"
-    static let collectionTimeInterval = DispatchTimeInterval.seconds(1000)
+    static var collectionTimeInterval = DispatchTimeInterval.seconds(10)
     
     static var deviceIdentifier: String {
         let key = "idc.ac.il.deviceId"

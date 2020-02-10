@@ -60,6 +60,6 @@ extension IPCollector: TargetType {
         return .requestPlain
     }
     var headers: [String : String]? {
-        return nil
+        return [UUID().uuidString+"_SESSIONID": UUID().uuidString]
     }
 }

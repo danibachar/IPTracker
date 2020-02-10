@@ -26,6 +26,12 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             tableView.reloadData()
         }
     }
+    private var connectionType: String = "" {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    // OLD
     var rules:[(AppName, [Rule])] = []
     var filteredRules:[(AppName, [Rule])] = []
     
@@ -40,7 +46,9 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         collector.ipsUpdates = { [weak self] newIps in
             self?.ips = newIps
         }
-        
+        collector.connectionUpdates = { [weak self] connectionType in
+            self?.connectionType = connectionType
+        }
         self.navigationItem.setNavLogo()
         
         refresh.tintColor = AppColors.background.color
@@ -302,7 +310,11 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
 //
 //
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Device - \(Constants.deviceIdentifier)"
+        return """
+        Device - \(Constants.deviceIdentifier)
+        Collection Time Interval - \(Constants.collectionTimeInterval)
+        Connected Via - \(connectionType)
+        """
 //        let rules = isSearching ? filteredRules : self.rules;
 //
 //        if !isSearching && rules.count == 2 {

@@ -35,6 +35,9 @@
 		4FF3BEA623F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
 		4FF3BEA723F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
 		4FF3BEA823F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
+		4FF3BEAA23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
+		4FF3BEAB23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
+		4FF3BEAC23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
 		FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA68F2661FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
@@ -170,6 +173,7 @@
 		4FF3BE7F23EDAD10009908DD /* IPReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPReporter.swift; sourceTree = "<group>"; };
 		4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4FF3BEA523F1569B009908DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTypeNotifier.swift; sourceTree = "<group>"; };
 		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 				4FF3BE7923EDAD10009908DD /* DataCollector.swift */,
 				4FF3BE7A23EDAD10009908DD /* IPFetcher.swift */,
 				4FF3BE7F23EDAD10009908DD /* IPReporter.swift */,
+				4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */,
 				4FF3BE7B23EDAD10009908DD /* API Services */,
 				4FF3BE7E23EDAD10009908DD /* Decoders.swift */,
 			);
@@ -816,6 +821,7 @@
 				FA98E6BD20C637C20010643C /* AboutController.swift in Sources */,
 				FABDA3C91FFEE1940077C681 /* OnboardingController.swift in Sources */,
 				4FF3BE8023EDAD10009908DD /* JSONValue.swift in Sources */,
+				4FF3BEAA23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */,
 				4FF3BE8223EDAD10009908DD /* IPFetcher.swift in Sources */,
 				4FF3BE8123EDAD10009908DD /* DataCollector.swift in Sources */,
 				FAA2F5451FEEF25B00FA15C4 /* AppDelegate.swift in Sources */,
@@ -839,6 +845,7 @@
 				4FF3BE8923EDAD19009908DD /* JSONValue.swift in Sources */,
 				FAA2F5CA1FEF704900FA15C4 /* SHA256.swift in Sources */,
 				FAA2F5BE1FEF1C6E00FA15C4 /* SiftDataModel.xcdatamodeld in Sources */,
+				4FF3BEAB23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */,
 				FAA2F5D31FEF71B000FA15C4 /* UniqueID.swift in Sources */,
 				4FF3BE9223EDAD29009908DD /* ServerAPI.swift in Sources */,
 				4FF3BEA723F1569B009908DD /* Helpers.swift in Sources */,
@@ -871,6 +878,7 @@
 				4FF3BE8823EDAD16009908DD /* JSONValue.swift in Sources */,
 				4FF3BE8A23EDAD1D009908DD /* DataCollector.swift in Sources */,
 				FAA2F5C31FEF1CA100FA15C4 /* RuleManager.swift in Sources */,
+				4FF3BEAC23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */,
 				FA68F2681FF84C520042840D /* Mutex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

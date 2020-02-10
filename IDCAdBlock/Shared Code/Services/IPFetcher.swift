@@ -22,11 +22,16 @@ final class IPFetcher {
             ]
     }()
     private lazy var results = [IPCollector: String]()
-    
-    func collect(completion: ( (_ ips: Set<String>?) -> Void)?) {
+    private lazy var queue = DispatchQueue(label: "collection.queue")
+    init() {
+        
+    }
+    private func pCollect(completion: ( (_ ips: Set<String>?) -> Void)?) {
         let group = DispatchGroup()
+        let smaphore = DispatchSemaphore(value: 1)
         collectors.forEach { _ in group.enter() }
         collectors.forEach {[weak self] (collector) in
+            smaphore.wait()
             self?.collectionProvider.request(collector) { (res) in
                 switch res {
                 case .failure(let error):
@@ -34,6 +39,7 @@ final class IPFetcher {
                 case .success(let res):
                     self?.results[collector] = collector.decoder?(res.data)
                 }
+                smaphore.signal()
                 group.leave()
             }
         }
@@ -48,6 +54,12 @@ final class IPFetcher {
             self?.results.removeAll()
             completion?(Set<String>(validAddressed))
         }
+    }
+    func collect(completion: ( (_ ips: Set<String>?) -> Void)?) {
+        queue.async { [weak self] in
+            self?.pCollect(completion: completion)
+        }
+
     }
 }
 
