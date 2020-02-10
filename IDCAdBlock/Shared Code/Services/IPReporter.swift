@@ -25,11 +25,7 @@ final class IPReporter {
     
     private lazy var encoder = JSONEncoder()
     
-    func send(ips: Set<String>?, connectionTypeName: String?, completion: ((_ error: Error?) -> Void)?) {
-        guard let ips = ips else {
-            completion?(NSError(domain: "Missing IPs", code: 1, userInfo: nil))
-            return
-        }
+    func send(ips: [String], connectionTypeName: String?, completion: ((_ error: Error?) -> Void)?) {
         let string = "\(Constants.deviceIdentifier)|\(connectionTypeName ?? "UNDEFINED")|[\(ips.joined(separator: ","))]"
         guard let data = try? JSONEncoder().encode(string) else {
             completion?(NSError(domain: "Faild Converting String to data", code: 2, userInfo: nil))
