@@ -1139,7 +1139,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1161,7 +1161,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
