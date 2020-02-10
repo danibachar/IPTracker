@@ -18,10 +18,17 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar:UISearchBar!
     @IBOutlet weak var resetButton:UIButton!
 
-
+    private var collector: DataCollector {
+        return DataCollector.instance
+    }
+    private var ips: [String] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     var rules:[(AppName, [Rule])] = []
     var filteredRules:[(AppName, [Rule])] = []
-
+    
     var isSearching:Bool = false
     
     var timer:Timer?
@@ -29,6 +36,10 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collector.ipsUpdates = { [weak self] newIps in
+            self?.ips = newIps
+        }
         
         self.navigationItem.setNavLogo()
         
@@ -266,182 +277,191 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     }
 
     // MARK: TableView
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        let rules = isSearching ? filteredRules : self.rules
-        
-        if !isSearching && rules.count == 2 {
-            return 1
-        }
-        return rules.count
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        let rules = isSearching ? filteredRules : self.rules
+//
+//        if !isSearching && rules.count == 2 {
+//            return 1
+//        }
+//        return rules.count
+//    }
     
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.textColor = AppColors.background.color
-        header.textLabel?.font = UIFont(name: "FiraSans-Bold", size: 20)
-        header.textLabel?.text = header.textLabel?.text?.capitalized
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.textLabel?.textColor = AppColors.background.color.withAlphaComponent(0.5)
-        header.textLabel?.font = UIFont(name: "FiraSans-Regular", size: 10)
-    }
-
-    
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        guard let header = view as? UITableViewHeaderFooterView else { return }
+//        header.textLabel?.textColor = AppColors.background.color
+//        header.textLabel?.font = UIFont(name: "FiraSans-Bold", size: 20)
+//        header.textLabel?.text = header.textLabel?.text?.capitalized
+//    }
+//
+//    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+//        guard let header = view as? UITableViewHeaderFooterView else { return }
+//        header.textLabel?.textColor = AppColors.background.color.withAlphaComponent(0.5)
+//        header.textLabel?.font = UIFont(name: "FiraSans-Regular", size: 10)
+//    }
+//
+//
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return ""
-        }
-        
-        if rules[section].1.isEmpty {
-            return ""
-        }
-        
-        return rules[section].0.commonName.lowercased()
+        return "Device - \(Constants.deviceIdentifier)"
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        if !isSearching && rules.count == 2 {
+//            return ""
+//        }
+//
+//        if rules[section].1.isEmpty {
+//            return ""
+//        }
+//
+//        return rules[section].0.commonName.lowercased()
     }
 
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return ""
-        }
-
-        if rules[section].1.isEmpty {
-            return ""
-        }
-        
-        return rules[section].0
-    }
+//    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        if !isSearching && rules.count == 2 {
+//            return ""
+//        }
+//
+//        if rules[section].1.isEmpty {
+//            return ""
+//        }
+//
+//        return rules[section].0
+//    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return 1
-        }
-
-        return rules[section].1.count
+        return ips.count
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        if !isSearching && rules.count == 2 {
+//            return 1
+//        }
+//
+//        return rules[section].1.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let rules = isSearching ? filteredRules : self.rules;
-        
-        if !isSearching && rules.count == 2 {
-            return tableView.dequeueReusableCell(withIdentifier: "EmptyRulesCell")!
-        }
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        if !isSearching && rules.count == 2 {
+//            return tableView.dequeueReusableCell(withIdentifier: "EmptyRulesCell")!
+//        }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "RuleCell") as! RuleCell
-        let rule = rules[indexPath.section].1[indexPath.row]
-        cell.set(rule: rule)
+//        let rule = rules[indexPath.section].1[indexPath.row]
+//        cell.set(rule: rule)
+        cell.set(ip: ips[indexPath.row], count: indexPath.row)
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if !isSearching && rules.count == 2 {
-            return false
-        }
-        return true
-    }
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        if !isSearching && rules.count == 2 {
+//            return false
+//        }
+//        return true
+//    }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        let rule = rules[indexPath.section].1[indexPath.row]
-        
-        
-        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: { (action, indexPath) in
-            
-            try? RuleManager().delete(rule: rule)
-            self.loadRules()
-        })
-        
-        deleteAction.backgroundColor = AppColors.deny.color
-
-        var actions = [deleteAction]
-
-        if rule.isAllowed {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Drop", handler: { (action, indexPath) in
-                
-                try? RuleManager().toggle(rule: rule)
-                self.loadRules()
-            })
-            action.backgroundColor = AppColors.deny.color
-            actions.append(action)
-        } else {
-            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Allow", handler: { (action, indexPath) in
-                
-                try? RuleManager().toggle(rule: rule)
-                self.loadRules()
-            })
-            action.backgroundColor = AppColors.allow.color
-            actions.append(action)
-        }
-        
-        return actions
-    }
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        let rule = rules[indexPath.section].1[indexPath.row]
+//
+//
+//        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: { (action, indexPath) in
+//
+//            try? RuleManager().delete(rule: rule)
+//            self.loadRules()
+//        })
+//
+//        deleteAction.backgroundColor = AppColors.deny.color
+//
+//        var actions = [deleteAction]
+//
+//        if rule.isAllowed {
+//            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Drop", handler: { (action, indexPath) in
+//
+//                try? RuleManager().toggle(rule: rule)
+//                self.loadRules()
+//            })
+//            action.backgroundColor = AppColors.deny.color
+//            actions.append(action)
+//        } else {
+//            let action = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Allow", handler: { (action, indexPath) in
+//
+//                try? RuleManager().toggle(rule: rule)
+//                self.loadRules()
+//            })
+//            action.backgroundColor = AppColors.allow.color
+//            actions.append(action)
+//        }
+//
+//        return actions
+//    }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rules = isSearching ? filteredRules : self.rules;
-
-        if !isSearching && rules.count == 2 {
-            return
-        }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let rules = isSearching ? filteredRules : self.rules;
+//
+//        if !isSearching && rules.count == 2 {
+//            return
+//        }
+//
+//        let rule = rules[indexPath.section].1[indexPath.row]
+//
+//        switch rule.ruleType {
+//        case .app:
+//            return
+//        case .host:
+//            return
+//        case .hostFromApp(let host, let app):
+//            let alertController = UIAlertController(title: host, message: "Chose a network rule for this host.", preferredStyle: .actionSheet)
+//
+//            if rule.isAllowed {
+//                alertController.addAction(UIAlertAction(title: "Drop for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
+//                    try? RuleManager().toggle(rule: rule)
+//                    self.loadRules()
+//                }))
+//
+//                alertController.addAction(UIAlertAction(title: "Drop for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
+//                    try? RuleManager().toggle(rule: rule)
+//                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: false))
+//                    self.loadRules()
+//                }))
+//            } else {
+//                alertController.addAction(UIAlertAction(title: "Allow for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
+//                    try? RuleManager().toggle(rule: rule)
+//                    self.loadRules()
+//                }))
+//
+//                alertController.addAction(UIAlertAction(title: "Allow for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
+//                    try? RuleManager().toggle(rule: rule)
+//                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: true))
+//                    self.loadRules()
+//                }))
+//            }
+//
+//
+//            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
+//
+//            }))
+//
+//            self.present(alertController, animated: true, completion: nil)
+//        }
         
-        let rule = rules[indexPath.section].1[indexPath.row]
-        
-        switch rule.ruleType {
-        case .app:
-            return
-        case .host:
-            return
-        case .hostFromApp(let host, let app):
-            let alertController = UIAlertController(title: host, message: "Chose a network rule for this host.", preferredStyle: .actionSheet)
-            
-            if rule.isAllowed {
-                alertController.addAction(UIAlertAction(title: "Drop for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    self.loadRules()
-                }))
-                
-                alertController.addAction(UIAlertAction(title: "Drop for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: false))
-                    self.loadRules()
-                }))
-            } else {
-                alertController.addAction(UIAlertAction(title: "Allow for \(app.commonName)", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    self.loadRules()
-                }))
-                
-                alertController.addAction(UIAlertAction(title: "Allow for all apps", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                    try? RuleManager().toggle(rule: rule)
-                    try? RuleManager().create(rule: Rule(ruleType: .host(host), isAllowed: true))
-                    self.loadRules()
-                }))
-            }
 
-            
-            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action:UIAlertAction) -> Void in
-                
-            }))
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
-        
-
-    }
+//    }
     
 }
 
 class RuleCell:UITableViewCell {
     @IBOutlet weak var valueLabel:UILabel!
     @IBOutlet weak var allowedLabel:UILabel!
+    func set(ip: String, count: Int) {
+        allowedLabel.text = "Ext IP #\(count)"
+        allowedLabel.textColor = AppColors.allow.color
+        valueLabel.text = ip
+    }
     
     func set(rule:Rule) {
         if rule.isAllowed {

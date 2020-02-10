@@ -32,6 +32,9 @@
 		4FF3BE9F23EDB294009908DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FF3BE9E23EDB294009908DD /* Moya */; };
 		4FF3BEA123EDB299009908DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FF3BEA023EDB299009908DD /* Moya */; };
 		4FF3BEA323EDB94D009908DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */; };
+		4FF3BEA623F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
+		4FF3BEA723F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
+		4FF3BEA823F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
 		FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA68F2661FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
@@ -166,6 +169,7 @@
 		4FF3BE7E23EDAD10009908DD /* Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		4FF3BE7F23EDAD10009908DD /* IPReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPReporter.swift; sourceTree = "<group>"; };
 		4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4FF3BEA523F1569B009908DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -267,6 +271,10 @@
 		4FF3BE7523EDACFC009908DD /* Shared Code */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2F5C41FEF6FD100FA15C4 /* Constants.swift */,
+				4FF3BEA523F1569B009908DD /* Helpers.swift */,
+				FA68F2651FF84C520042840D /* Mutex.swift */,
+				FAA2F5B41FEF06F100FA15C4 /* Core */,
 				4FF3BE7623EDAD10009908DD /* Models */,
 				4FF3BE7823EDAD10009908DD /* Services */,
 			);
@@ -284,6 +292,7 @@
 		4FF3BE7823EDAD10009908DD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2F5C01FEF1CA100FA15C4 /* RuleManager.swift */,
 				4FF3BE7923EDAD10009908DD /* DataCollector.swift */,
 				4FF3BE7A23EDAD10009908DD /* IPFetcher.swift */,
 				4FF3BE7F23EDAD10009908DD /* IPReporter.swift */,
@@ -331,12 +340,8 @@
 				FAA2F5BB1FEF1C6E00FA15C4 /* SiftDataModel.xcdatamodeld */,
 				FAA2F5531FEEF25B00FA15C4 /* Info.plist */,
 				FAA2F5441FEEF25B00FA15C4 /* AppDelegate.swift */,
-				FAA2F5C41FEF6FD100FA15C4 /* Constants.swift */,
-				FAA2F5C01FEF1CA100FA15C4 /* RuleManager.swift */,
 				FAA2F5D51FEF738C00FA15C4 /* Notification.swift */,
-				FA68F2651FF84C520042840D /* Mutex.swift */,
 				4FF3BE7523EDACFC009908DD /* Shared Code */,
-				FAA2F5B41FEF06F100FA15C4 /* Core */,
 				FAA2F55A1FEEF2EE00FA15C4 /* Controllers */,
 				FAA2F5591FEEF2E800FA15C4 /* UX */,
 				FAA2F54E1FEEF25B00FA15C4 /* Assets.xcassets */,
@@ -804,6 +809,7 @@
 				FABDA3CB1FFEE8B90077C681 /* StaticRules.swift in Sources */,
 				FAA2F6471FF57F9600FA15C4 /* NetCache.swift in Sources */,
 				FAA2F5D61FEF738C00FA15C4 /* Notification.swift in Sources */,
+				4FF3BEA623F1569B009908DD /* Helpers.swift in Sources */,
 				FAA2F5D21FEF71B000FA15C4 /* UniqueID.swift in Sources */,
 				FAA2F5B61FEF071100FA15C4 /* Rule.swift in Sources */,
 				FA68F26F1FF85A510042840D /* Flow.swift in Sources */,
@@ -835,6 +841,7 @@
 				FAA2F5BE1FEF1C6E00FA15C4 /* SiftDataModel.xcdatamodeld in Sources */,
 				FAA2F5D31FEF71B000FA15C4 /* UniqueID.swift in Sources */,
 				4FF3BE9223EDAD29009908DD /* ServerAPI.swift in Sources */,
+				4FF3BEA723F1569B009908DD /* Helpers.swift in Sources */,
 				4FF3BE8E23EDAD23009908DD /* Decoders.swift in Sources */,
 				FA68F2701FF85A510042840D /* Flow.swift in Sources */,
 				FAA2F5B71FEF071100FA15C4 /* Rule.swift in Sources */,
@@ -847,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF3BE8D23EDAD21009908DD /* IPFetcher.swift in Sources */,
+				4FF3BEA823F1569B009908DD /* Helpers.swift in Sources */,
 				FAA2F5C71FEF6FD100FA15C4 /* Constants.swift in Sources */,
 				FA68F2711FF85A510042840D /* Flow.swift in Sources */,
 				4FF3BE8F23EDAD23009908DD /* Decoders.swift in Sources */,

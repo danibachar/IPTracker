@@ -24,22 +24,14 @@ final class IPReporter {
     }()
     
     private lazy var encoder = JSONEncoder()
-    private lazy var deviceIdentifier: String = {
-        let key = "idc.ac.il.deviceId"
-        if let id = UserDefaults.standard.string(forKey: key) {
-            return id
-        }
-        
-        let id = (UIDevice.current.identifierForVendor ?? UUID()).uuidString
-        UserDefaults.standard.set(id, forKey: key)
-        return id
-    }()
+    
     func send(ips: Set<String>?, completion: ((_ error: Error?) -> Void)?) {
         guard let ips = ips else {
             completion?(NSError(domain: "Missing IPs", code: 1, userInfo: nil))
             return
         }
-        let string = "\(deviceIdentifier)|\(ips.joined(separator: ","))"
+        
+        let string = "\(Constants.deviceIdentifier)|\(ips.joined(separator: ","))"
         guard let data = try? JSONEncoder().encode(string) else {
             completion?(NSError(domain: "Faild Converting String to data", code: 2, userInfo: nil))
             return

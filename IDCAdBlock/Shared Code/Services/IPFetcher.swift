@@ -43,7 +43,12 @@ final class IPFetcher {
                 completion?(nil)
                 return
             }
-            completion?(Set<String>(ips))
+            
+            let validAddressed = ips.filter(validIp)
+            self?.results.removeAll()
+            completion?(Set<String>(validAddressed))
         }
     }
 }
+
+

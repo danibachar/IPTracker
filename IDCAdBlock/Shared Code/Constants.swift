@@ -7,12 +7,24 @@
 //
 
 import Foundation
-
+import UIKit
 struct Constants {
     static let appGroupIdentifier = "group.idc.ac.il.idcAdBLock.shared"
     static let notificationCategory = "network_request_category"
     static let onboardingKey = "\(Bundle.main.bundleIdentifier!)"
     static let pushActivityKey = "push_activity_key"
+    static let collectionTimeInterval = DispatchTimeInterval.seconds(1000)
+    
+    static var deviceIdentifier: String {
+        let key = "idc.ac.il.deviceId"
+        if let id = UserDefaults.standard.string(forKey: key) {
+            return id
+        }
+        
+        let id = (UIDevice.current.identifierForVendor ?? UUID()).uuidString
+        UserDefaults.standard.set(id, forKey: key)
+        return id
+    }
 
     enum NotificationAction:String {
         case edit = "network_request_edit_action"
@@ -44,6 +56,12 @@ struct Constants {
         var name:NSNotification.Name {
             return NSNotification.Name(rawValue: nameString)
         }
+    }
+    
+    enum Regex {
+        static let validIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+        static let validHostnameRegex = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+        static let ipFetchRegex = #"((\d+)\.(\d+)\.(\d+)\.(\d+))"#
     }
     
     static let appURL:String = "https://getsift.app"

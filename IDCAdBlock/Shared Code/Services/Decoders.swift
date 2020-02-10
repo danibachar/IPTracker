@@ -7,7 +7,6 @@
 //
 
 import Foundation
-private let ipRegex = #"((\d+)\.(\d+)\.(\d+)\.(\d+))"#
 
 func stringDecoder(_ data: Data) -> String? {
     return String(data: data, encoding: .utf8)
@@ -16,7 +15,7 @@ func stringDecoder(_ data: Data) -> String? {
 func htmlStringDecoder(_ data: Data) -> String? {
     guard
         let string = stringDecoder(data),
-        let range = string.range(of: ipRegex, options: .regularExpression)
+        let range = string.range(of: Constants.Regex.ipFetchRegex, options: .regularExpression)
     else { return nil}
     return String(string[range])
 }
