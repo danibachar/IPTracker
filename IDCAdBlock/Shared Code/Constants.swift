@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import KeychainAccess
+
 struct Constants {
     static let appGroupIdentifier = "group.idc.ac.il.idcAdBLock.shared"
     static let notificationCategory = "network_request_category"
@@ -15,6 +17,10 @@ struct Constants {
     static let pushActivityKey = "push_activity_key"
     static var collectionTimeInterval = TimeInterval(300)
     static var notificationTimeInterval = TimeInterval(1800)
+    
+    static var didOnboard: Bool {
+        return UserDefaults.standard.bool(forKey: Constants.onboardingKey)
+    }
     
     static var deviceIdentifier: String {
         let key = "idc.ac.il.deviceId"
@@ -63,19 +69,6 @@ struct Constants {
         static let validIpAddressRegex = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
         static let validHostnameRegex = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
         static let ipFetchRegex = #"((\d+)\.(\d+)\.(\d+)\.(\d+))"#
-    }
-    
-    static let appURL:String = "https://getsift.app"
-    static let promoText:String = "Sift uncovers what apps are really doing on your phone."
-    
-    enum WebsiteEndpoints:String {
-        case faq = "faq"
-        case privacy = "privacy"
-        case developer = "developer"
-        
-        var url:String {
-            return "\(Constants.appURL)/\(self.rawValue)"
-        }
     }
 
 }

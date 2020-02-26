@@ -51,8 +51,8 @@ class OBNetworkPermissionsController: UIViewController {
     @IBAction func enableNetFilterToggled() {
         if NEFilterManager.shared().providerConfiguration == nil {
             let newConfiguration = NEFilterProviderConfiguration()
-            newConfiguration.username = "Sift"
-            newConfiguration.organization = "Sift App"
+            newConfiguration.username = "IDCAdBlock"
+            newConfiguration.organization = "IDCAdBlock App"
             newConfiguration.filterBrowsers = true
             newConfiguration.filterSockets = true
             NEFilterManager.shared().providerConfiguration = newConfiguration

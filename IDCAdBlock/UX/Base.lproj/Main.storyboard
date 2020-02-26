@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -307,9 +306,6 @@
                     <navigationItem key="navigationItem" id="f9L-XM-2wc">
                         <barButtonItem key="rightBarButtonItem" title="..." style="plain" id="QbF-O4-whe">
                             <color key="tintColor" red="0.98979491649999995" green="1" blue="0.99625116729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <segue destination="hAh-2e-A3e" kind="show" id="mCk-1k-TCp"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -323,144 +319,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ur9-Py-fkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837.60000000000002" y="178.56071964017991"/>
-        </scene>
-        <!--About Controller-->
-        <scene sceneID="kPK-Yt-SM4">
-            <objects>
-                <viewController id="hAh-2e-A3e" customClass="AboutController" customModule="IDCAdBlock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uIF-v2-rvx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-mH-jfx" customClass="GradientView" customModule="IDCAdBlock" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwW-Jk-vIh">
-                                        <rect key="frame" x="97" y="127.5" width="181" height="144"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="120"/>
-                                        <color key="textColor" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM2-nI-cId">
-                                        <rect key="frame" x="40" y="272.5" width="295" height="24"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
-                                        <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🛠 in boston" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8j-lc-hjg">
-                                        <rect key="frame" x="130.5" y="530" width="114" height="24"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="20"/>
-                                        <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-I3-Q7v" customClass="OutlinedButton" customModule="IDCAdBlock" customModuleProvider="target">
-                                        <rect key="frame" x="207.5" y="336.5" width="127.5" height="32"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="16"/>
-                                        <state key="normal" title="Privacy"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.98979491649999995" green="1" blue="0.99625116729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
-                                                <color key="value" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="privacyTapped" destination="hAh-2e-A3e" eventType="touchUpInside" id="0EK-9T-Kdm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-eM-KFp">
-                                        <rect key="frame" x="136.5" y="554" width="102" height="29"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="by alex grinman">
-                                                    <attributes>
-                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <color key="NSColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="14"/>
-                                                        <integer key="NSUnderline" value="1"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="developerTapped" destination="hAh-2e-A3e" eventType="touchUpInside" id="668-17-rrP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft4-4b-NV7" customClass="OutlinedButton" customModule="IDCAdBlock" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="336.5" width="127.5" height="32"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="16"/>
-                                        <state key="normal" title="FAQ"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.98979491649999995" green="1" blue="0.99625116729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
-                                                <color key="value" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="faqTapped" destination="hAh-2e-A3e" eventType="touchUpInside" id="bhK-yk-V6k"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="nhN-eM-KFp" firstAttribute="top" secondItem="a8j-lc-hjg" secondAttribute="bottom" id="0TL-cY-hgg"/>
-                                    <constraint firstItem="tZj-I3-Q7v" firstAttribute="width" secondItem="ft4-4b-NV7" secondAttribute="width" id="8Xc-9M-6Ea"/>
-                                    <constraint firstItem="ZwW-Jk-vIh" firstAttribute="bottom" secondItem="rvz-mH-jfx" secondAttribute="centerY" constant="-40" id="AIJ-bj-HGE"/>
-                                    <constraint firstItem="tZj-I3-Q7v" firstAttribute="centerY" secondItem="ft4-4b-NV7" secondAttribute="centerY" id="AoN-RD-l8r"/>
-                                    <constraint firstItem="nhN-eM-KFp" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="B2I-zl-1cS"/>
-                                    <constraint firstItem="tZj-I3-Q7v" firstAttribute="leading" secondItem="ft4-4b-NV7" secondAttribute="trailing" constant="40" id="D3F-YG-9SC"/>
-                                    <constraint firstAttribute="trailing" secondItem="qM2-nI-cId" secondAttribute="trailing" constant="40" id="EE2-Ii-ENl"/>
-                                    <constraint firstItem="ZwW-Jk-vIh" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="L6b-C7-PjA"/>
-                                    <constraint firstItem="qM2-nI-cId" firstAttribute="top" secondItem="ZwW-Jk-vIh" secondAttribute="bottom" constant="1" id="NpM-5j-DEK"/>
-                                    <constraint firstAttribute="trailing" secondItem="tZj-I3-Q7v" secondAttribute="trailing" constant="40" id="Wzv-XO-DNC"/>
-                                    <constraint firstItem="ft4-4b-NV7" firstAttribute="leading" secondItem="rvz-mH-jfx" secondAttribute="leading" constant="40" id="djZ-JK-qz6"/>
-                                    <constraint firstItem="ft4-4b-NV7" firstAttribute="top" secondItem="qM2-nI-cId" secondAttribute="bottom" constant="40" id="fqI-Y7-FYe"/>
-                                    <constraint firstItem="qM2-nI-cId" firstAttribute="leading" secondItem="rvz-mH-jfx" secondAttribute="leading" constant="40" id="mQd-mW-YGu"/>
-                                    <constraint firstAttribute="bottom" secondItem="nhN-eM-KFp" secondAttribute="bottom" constant="40" id="vEt-yj-kPA"/>
-                                    <constraint firstItem="a8j-lc-hjg" firstAttribute="centerX" secondItem="rvz-mH-jfx" secondAttribute="centerX" id="zWh-d7-JCu"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.13725490200000001" green="1" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rvz-mH-jfx" firstAttribute="top" secondItem="uIF-v2-rvx" secondAttribute="top" id="bLt-UL-jCH"/>
-                            <constraint firstAttribute="bottom" secondItem="rvz-mH-jfx" secondAttribute="bottom" id="ggE-Z6-LrR"/>
-                            <constraint firstItem="rvz-mH-jfx" firstAttribute="leading" secondItem="uIF-v2-rvx" secondAttribute="leading" id="lap-tB-3Ls"/>
-                            <constraint firstAttribute="trailing" secondItem="rvz-mH-jfx" secondAttribute="trailing" id="n6K-7r-p8e"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ph2-4r-6fk"/>
-                    </view>
-                    <connections>
-                        <outlet property="versionLabel" destination="qM2-nI-cId" id="UO0-rj-MLH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iyl-0K-Uvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1589.5999999999999" y="177.66116941529236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K4A-yj-c2x">

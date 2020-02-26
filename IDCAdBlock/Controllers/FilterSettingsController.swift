@@ -37,7 +37,6 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     
     var isSearching:Bool = false
     
-    var timer:Timer?
     let refresh = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -49,6 +48,11 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
         collector.connectionUpdates = { [weak self] connectionType in
             self?.connectionType = connectionType
         }
+        collector.loading = { [weak self] isLoading in
+            guard Constants.didOnboard  else { return }
+            self?.displayActivityIndicator(shouldDisplay: isLoading)
+        }
+        
         self.navigationItem.setNavLogo()
         
         refresh.tintColor = AppColors.background.color
@@ -84,6 +88,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
             if let loadError = error {
                 self.enabledSwitch.isOn = false
                 self.enabledLabel.text = self.enabledSwitch.isOn ? "Enabled" : "Disabled"
+                guard Constants.didOnboard  else { return }
                 self.showWarning(title: "Error loading preferences", body: "\(loadError)")
                 
                 return
@@ -99,8 +104,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if !UserDefaults.standard.bool(forKey: Constants.onboardingKey) {
+        guard Constants.didOnboard  else {
             self.showOnboarding()
             return
         }
@@ -124,6 +128,7 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     func showOnboarding() {
         DispatchQueue.main.async {
             let onboardingController = Storyboard.Onboarding.instantiateInitialViewController()!
+//            self.navigationController?.pushViewController(onboardingController, animated: true)
             self.present(onboardingController, animated: true, completion: nil)
         }
     }
@@ -246,8 +251,8 @@ class FilterSettingsController: UITableViewController, UISearchBarDelegate {
     func enable() {
         if NEFilterManager.shared().providerConfiguration == nil {
             let newConfiguration = NEFilterProviderConfiguration()
-            newConfiguration.username = "Sift"
-            newConfiguration.organization = "Sift App"
+            newConfiguration.username = "IDCAdBlock"
+            newConfiguration.organization = "IDCAdBlock App"
             newConfiguration.filterBrowsers = true
             newConfiguration.filterSockets = true
             NEFilterManager.shared().providerConfiguration = newConfiguration

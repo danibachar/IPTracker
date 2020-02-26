@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
             }
         }
-        DataCollector.instance.startCollecting()
+//        DataCollector.instance.startCollecting()
+        IPFetcher().collect(completion: nil)
         return true
     }
     

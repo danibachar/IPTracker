@@ -24,8 +24,16 @@ final class DataCollector {
     private var lastCollectedConnectionType: String = ""
     private var lastCollectedIps: [String] = []
     // State
-    private lazy var isCollecting: Bool = false
-    private lazy var isNotifying: Bool = false
+    private var isCollecting: Bool = false {
+        didSet {
+            loading?(isCollecting)
+        }
+    }
+    private var isNotifying: Bool = false {
+        didSet {
+            loading?(isNotifying)
+        }
+    }
     private lazy var stopRecursion: Bool = false
     // Collection State
     private let lastCollectionDateKey = "lastCollectionDate"
@@ -70,6 +78,7 @@ final class DataCollector {
     // Delegates
     var ipsUpdates: ((_ ips: [String]) -> Void)?
     var connectionUpdates: ((_ connection: String) -> Void)?
+    var loading: ((_ isLoading: Bool) -> Void)?
     
     init() {
         connectionNotifier.connectionUpdates = { [weak self] status in
@@ -79,14 +88,16 @@ final class DataCollector {
             self?.connectionUpdates?(status)
             // Force new collection and notification
             print("connectionUpdates")
-            self?.updateLogic()
+            self?.updateLogic(false, true)
         }
     }
     // MARK: - Public
+    private var recurseCount: Int = 0
     func startCollecting() {
         stopRecursion=false
         print("startCollecting")
-        updateLogic()
+        updateLogic(recurseCount<1)
+        recurseCount+=1
     }
     
     func stopCollecting() {
@@ -95,18 +106,38 @@ final class DataCollector {
     // MARK: - Private
     // MARK: - Actions
     
-    func updateLogic() {
+    func updateLogic(_ shouldRecurse: Bool, _ forceCollection: Bool=false) {
         print("### updateLogic 1")
         guard !stopRecursion, !isCollecting, !isNotifying else { return }
+        
+        if forceCollection {
+            collectData { [ weak self] (didIpChanged) in
+                guard didIpChanged else { return }
+                self?.notifyNewData(completion: { (didNotify) in
+                    guard shouldRecurse else { return }
+                    self?.recurse()
+                })
+            }
+            return
+        }
+        
+        
+        
         print("### updateLogic 2")
         let timePassedFromLastNotification = -(lastNotificationDate.timeIntervalSinceNow) >= Constants.notificationTimeInterval
         let didNverCollect = lastCollectedIps.isEmpty
         if timePassedFromLastNotification || didNverCollect {
             print("### updateLogic 3")
-            collectData { [weak self] (didCollect) in
+            collectData { [weak self] (didIpChanged) in
+                guard didIpChanged else {
+                    guard shouldRecurse else { return }
+                    self?.recurse()
+                    return
+                }
                 print("### updateLogic 4")
                 self?.notifyNewData { (didNotify) in
                     print("### updateLogic 5")
+                    guard shouldRecurse else { return }
                     self?.recurse()
                 }
             }
@@ -114,17 +145,20 @@ final class DataCollector {
             let timePassedFromLastCollection = -(lastCollectionDate.timeIntervalSinceNow) >= Constants.collectionTimeInterval
             if timePassedFromLastCollection {
                 print("### updateLogic 7")
-                collectData { [weak self] (didCollect) in
-                    guard didCollect else {
+                collectData { [weak self] (didIpChanged) in
+                    guard didIpChanged else {
+                        guard shouldRecurse else { return }
                         self?.recurse()
                         return
                     }
                     print("### updateLogic 8")
                     self?.notifyNewData(completion: { (diNotify) in
+                        guard shouldRecurse else { return }
                         self?.recurse()
                     })
                 }
             } else {
+                guard shouldRecurse else { return }
                 self.recurse()
             }
         }
@@ -137,7 +171,7 @@ final class DataCollector {
         DispatchQueue.main.asyncAfter(deadline: .now()+interval) { [weak self] in
             guard let self = self, !self.stopRecursion else { return }
             print("recursing")
-            self.updateLogic()
+            self.updateLogic(true)
         }
     }
     private func collectData(completion: ((Bool) -> Void)?=nil) {
@@ -157,7 +191,9 @@ final class DataCollector {
             self?.lastCollectedIps = collectedIps
             //Delegatet
             self?.ipsUpdates?(collectedIps)
-            completion?(Set<String>(lastCollectedIps) != Set<String>(collectedIps))
+            
+            let didIpChangedFromLastCollection = Set<String>(lastCollectedIps) != Set<String>(collectedIps)
+            completion?(didIpChangedFromLastCollection)
         }
     }
     
@@ -166,7 +202,6 @@ final class DataCollector {
             completion?(false)
             return
         }
-
         isNotifying = true
         ipReported.send(ips: lastCollectedIps, connectionTypeName: lastCollectedConnectionType) { [ weak self] error in
             self?.isNotifying = false

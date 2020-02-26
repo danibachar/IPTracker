@@ -14,7 +14,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)(null)</string>
+		<string>$(AppIdentifierPrefix)idc.ac.il.idcAdBLock.keychain.shared</string>
 	</array>
 </dict>
 </plist>

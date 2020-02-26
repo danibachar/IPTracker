@@ -13,6 +13,6 @@ func validIp(_ ip: String) -> Bool {
         options: .regularExpression,
         range: nil,
         locale: nil
-    )?.isEmpty ?? false
+    )?.isEmpty ?? true
     return !isNotValid
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F8E474024067A79002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E473F24067A79002FB279 /* KeychainAccess */; };
+		4F8E474224067A8B002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E474124067A8B002FB279 /* KeychainAccess */; };
+		4F8E474424067A91002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E474324067A91002FB279 /* KeychainAccess */; };
 		4FF3BE8023EDAD10009908DD /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BE7723EDAD10009908DD /* JSONValue.swift */; };
 		4FF3BE8123EDAD10009908DD /* DataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BE7923EDAD10009908DD /* DataCollector.swift */; };
 		4FF3BE8223EDAD10009908DD /* IPFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BE7A23EDAD10009908DD /* IPFetcher.swift */; };
@@ -31,7 +34,6 @@
 		4FF3BE9D23EDB28E009908DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FF3BE9C23EDB28E009908DD /* Moya */; };
 		4FF3BE9F23EDB294009908DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FF3BE9E23EDB294009908DD /* Moya */; };
 		4FF3BEA123EDB299009908DD /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FF3BEA023EDB299009908DD /* Moya */; };
-		4FF3BEA323EDB94D009908DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */; };
 		4FF3BEA623F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
 		4FF3BEA723F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
 		4FF3BEA823F1569B009908DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA523F1569B009908DD /* Helpers.swift */; };
@@ -49,7 +51,6 @@
 		FA68F2741FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
 		FA68F2751FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
 		FA68F2761FF85E190042840D /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA68F2731FF85E190042840D /* Onboarding.storyboard */; };
-		FA98E6BD20C637C20010643C /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98E6BC20C637C20010643C /* AboutController.swift */; };
 		FAA2F5451FEEF25B00FA15C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5441FEEF25B00FA15C4 /* AppDelegate.swift */; };
 		FAA2F5471FEEF25B00FA15C4 /* FilterSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2F5461FEEF25B00FA15C4 /* FilterSettingsController.swift */; };
 		FAA2F54A1FEEF25B00FA15C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2F5481FEEF25B00FA15C4 /* Main.storyboard */; };
@@ -171,14 +172,12 @@
 		4FF3BE7D23EDAD10009908DD /* IPCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPCollector.swift; sourceTree = "<group>"; };
 		4FF3BE7E23EDAD10009908DD /* Decoders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoders.swift; sourceTree = "<group>"; };
 		4FF3BE7F23EDAD10009908DD /* IPReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPReporter.swift; sourceTree = "<group>"; };
-		4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4FF3BEA523F1569B009908DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTypeNotifier.swift; sourceTree = "<group>"; };
 		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		FA98E6BC20C637C20010643C /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
-		FAA2F5411FEEF25B00FA15C4 /* IDCAdBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDCAdBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2F5411FEEF25B00FA15C4 /* IPTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2F5441FEEF25B00FA15C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA2F5461FEEF25B00FA15C4 /* FilterSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSettingsController.swift; sourceTree = "<group>"; };
 		FAA2F5491FEEF25B00FA15C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -248,6 +247,7 @@
 			files = (
 				4FF3BE9D23EDB28E009908DD /* Moya in Frameworks */,
 				FAA2F55F1FEEF36E00FA15C4 /* NetworkExtension.framework in Frameworks */,
+				4F8E474024067A79002FB279 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +257,7 @@
 			files = (
 				4FF3BE9F23EDB294009908DD /* Moya in Frameworks */,
 				FAA2F5711FEEF51D00FA15C4 /* NetworkExtension.framework in Frameworks */,
+				4F8E474224067A8B002FB279 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +267,7 @@
 			files = (
 				4FF3BEA123EDB299009908DD /* Moya in Frameworks */,
 				FAA2F5821FEEF53C00FA15C4 /* NetworkExtension.framework in Frameworks */,
+				4F8E474424067A91002FB279 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +321,6 @@
 		FAA2F5381FEEF25B00FA15C4 = {
 			isa = PBXGroup;
 			children = (
-				4FF3BEA223EDB94D009908DD /* Default-568h@2x.png */,
 				FAA2F5431FEEF25B00FA15C4 /* IDCAdBlock */,
 				FAA2F5651FEEF51200FA15C4 /* IDCAdBlockData */,
 				FAA2F5771FEEF53000FA15C4 /* IDCAdBlockControl */,
@@ -331,7 +332,7 @@
 		FAA2F5421FEEF25B00FA15C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAA2F5411FEEF25B00FA15C4 /* IDCAdBlock.app */,
+				FAA2F5411FEEF25B00FA15C4 /* IPTracker.app */,
 				FAA2F5641FEEF51100FA15C4 /* IDCAdBlockData.appex */,
 				FAA2F5761FEEF53000FA15C4 /* IDCAdBlockControl.appex */,
 			);
@@ -371,7 +372,6 @@
 			children = (
 				FABDA3C81FFEE1940077C681 /* OnboardingController.swift */,
 				FAA2F5461FEEF25B00FA15C4 /* FilterSettingsController.swift */,
-				FA98E6BC20C637C20010643C /* AboutController.swift */,
 				FAA2F5B91FEF0FB700FA15C4 /* UIViewController+Util.swift */,
 			);
 			path = Controllers;
@@ -539,9 +539,10 @@
 			name = IDCAdBlock;
 			packageProductDependencies = (
 				4FF3BE9C23EDB28E009908DD /* Moya */,
+				4F8E473F24067A79002FB279 /* KeychainAccess */,
 			);
 			productName = Sift;
-			productReference = FAA2F5411FEEF25B00FA15C4 /* IDCAdBlock.app */;
+			productReference = FAA2F5411FEEF25B00FA15C4 /* IPTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAA2F5631FEEF51100FA15C4 /* IDCAdBlockData */ = {
@@ -560,6 +561,7 @@
 			name = IDCAdBlockData;
 			packageProductDependencies = (
 				4FF3BE9E23EDB294009908DD /* Moya */,
+				4F8E474124067A8B002FB279 /* KeychainAccess */,
 			);
 			productName = SiftData;
 			productReference = FAA2F5641FEEF51100FA15C4 /* IDCAdBlockData.appex */;
@@ -581,6 +583,7 @@
 			name = IDCAdBlockControl;
 			packageProductDependencies = (
 				4FF3BEA023EDB299009908DD /* Moya */,
+				4F8E474324067A91002FB279 /* KeychainAccess */,
 			);
 			productName = SiftControl;
 			productReference = FAA2F5761FEEF53000FA15C4 /* IDCAdBlockControl.appex */;
@@ -654,6 +657,7 @@
 			mainGroup = FAA2F5381FEEF25B00FA15C4;
 			packageReferences = (
 				4FF3BE9B23EDB28E009908DD /* XCRemoteSwiftPackageReference "Moya" */,
+				4F8E473E24067A79002FB279 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = FAA2F5421FEEF25B00FA15C4 /* Products */;
 			projectDirPath = "";
@@ -720,7 +724,6 @@
 				FA68F2741FF85E190042840D /* Onboarding.storyboard in Resources */,
 				FAA2F5521FEEF25B00FA15C4 /* LaunchScreen.storyboard in Resources */,
 				FAA2F54F1FEEF25B00FA15C4 /* Assets.xcassets in Resources */,
-				4FF3BEA323EDB94D009908DD /* Default-568h@2x.png in Resources */,
 				FAA2F59E1FEEF7F700FA15C4 /* FiraMono-Regular.ttf in Resources */,
 				FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */,
 				FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */,
@@ -818,7 +821,6 @@
 				FAA2F5D21FEF71B000FA15C4 /* UniqueID.swift in Sources */,
 				FAA2F5B61FEF071100FA15C4 /* Rule.swift in Sources */,
 				FA68F26F1FF85A510042840D /* Flow.swift in Sources */,
-				FA98E6BD20C637C20010643C /* AboutController.swift in Sources */,
 				FABDA3C91FFEE1940077C681 /* OnboardingController.swift in Sources */,
 				4FF3BE8023EDAD10009908DD /* JSONValue.swift in Sources */,
 				4FF3BEAA23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */,
@@ -1053,7 +1055,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlock/IDCAdBlock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1062,7 +1064,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock;
-				PRODUCT_NAME = IDCAdBlock;
+				PRODUCT_NAME = IPTracker;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1075,7 +1077,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlock/IDCAdBlock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1084,7 +1086,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock;
-				PRODUCT_NAME = IDCAdBlock;
+				PRODUCT_NAME = IPTracker;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1095,7 +1097,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockData/IDCAdBlockData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1117,7 +1119,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockData/IDCAdBlockData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1139,7 +1141,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1161,7 +1163,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1220,6 +1222,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4F8E473E24067A79002FB279 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
 		4FF3BE9B23EDB28E009908DD /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1231,6 +1241,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4F8E473F24067A79002FB279 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F8E473E24067A79002FB279 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		4F8E474124067A8B002FB279 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F8E473E24067A79002FB279 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		4F8E474324067A91002FB279 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F8E473E24067A79002FB279 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		4FF3BE9C23EDB28E009908DD /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4FF3BE9B23EDB28E009908DD /* XCRemoteSwiftPackageReference "Moya" */;
