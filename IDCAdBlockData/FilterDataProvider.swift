@@ -24,34 +24,6 @@ class FilterDataProvider: NEFilterDataProvider {
     
     override func handleNewFlow(_ flow: NEFilterFlow) -> NEFilterNewFlowVerdict {
         DataCollector.instance.startCollecting()
-        
-        guard  let app = flow.sourceAppIdentifier
-        else {
-            return .allow()
-        }
-        
-        let host = flow.getHost()
-        
-        // ignore exceptions
-        if Set(StaticRules.apps).contains(app) {
-            return .allow()
-        }
-        
-        if let host = host, Set(StaticRules.hosts).contains(host) {
-            return .allow()
-        }
-
-        // try to get the rule or ask for an update
-        do {
-            guard let rule = try RuleManager().getRule(for: app, hostname: host)
-            else {
-                return .needRules()
-            }
-            
-            return rule.isAllowed ? .allow() : .drop()
-
-        } catch {
-            return .needRules()
-        }
+        return .allow()
     }
 }
