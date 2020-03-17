@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16A86B020A1054AB806068B9 /* Pods_IDCAdBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B4DBAA02389FA5A98D70A /* Pods_IDCAdBlock.framework */; };
+		4F0C9ABB241901A20052FDDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F0C9ABA241901A20052FDDE /* GoogleService-Info.plist */; };
 		4F8E474024067A79002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E473F24067A79002FB279 /* KeychainAccess */; };
 		4F8E474224067A8B002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E474124067A8B002FB279 /* KeychainAccess */; };
 		4F8E474424067A91002FB279 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4F8E474324067A91002FB279 /* KeychainAccess */; };
@@ -40,6 +42,8 @@
 		4FF3BEAA23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
 		4FF3BEAB23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
 		4FF3BEAC23F159B6009908DD /* InternetConnectionTypeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */; };
+		63E484E8AA7F70E4B426B09A /* Pods_IDCAdBlockControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4D9251D65F132A7A057CEC /* Pods_IDCAdBlockControl.framework */; };
+		6EE5A8819592783C49FB5BE8 /* Pods_IDCAdBlockData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3AB9CC2EAB08E77FDCC6AE /* Pods_IDCAdBlockData.framework */; };
 		FA0A6B2B20C4A41A00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA0A6B2D20C4A41C00222EF2 /* StaticRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */; };
 		FA68F2661FF84C520042840D /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68F2651FF84C520042840D /* Mutex.swift */; };
@@ -165,6 +169,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03B159D8DEB1C54560908048 /* Pods-IDCAdBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlock.debug.xcconfig"; path = "Target Support Files/Pods-IDCAdBlock/Pods-IDCAdBlock.debug.xcconfig"; sourceTree = "<group>"; };
+		054459064F07DAF2A4635790 /* Pods-IDCAdBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlock.release.xcconfig"; path = "Target Support Files/Pods-IDCAdBlock/Pods-IDCAdBlock.release.xcconfig"; sourceTree = "<group>"; };
+		0E4B4DBAA02389FA5A98D70A /* Pods_IDCAdBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDCAdBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3AB9CC2EAB08E77FDCC6AE /* Pods_IDCAdBlockData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDCAdBlockData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4770863F366E0BEB1F9A23F6 /* Pods-IDCAdBlockData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlockData.release.xcconfig"; path = "Target Support Files/Pods-IDCAdBlockData/Pods-IDCAdBlockData.release.xcconfig"; sourceTree = "<group>"; };
+		4F0C9ABA241901A20052FDDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FF3BE7723EDAD10009908DD /* JSONValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
 		4FF3BE7923EDAD10009908DD /* DataCollector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCollector.swift; sourceTree = "<group>"; };
 		4FF3BE7A23EDAD10009908DD /* IPFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPFetcher.swift; sourceTree = "<group>"; };
@@ -174,6 +184,9 @@
 		4FF3BE7F23EDAD10009908DD /* IPReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPReporter.swift; sourceTree = "<group>"; };
 		4FF3BEA523F1569B009908DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4FF3BEA923F159B6009908DD /* InternetConnectionTypeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionTypeNotifier.swift; sourceTree = "<group>"; };
+		529634ECB67F422361F171D7 /* Pods-IDCAdBlockControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlockControl.release.xcconfig"; path = "Target Support Files/Pods-IDCAdBlockControl/Pods-IDCAdBlockControl.release.xcconfig"; sourceTree = "<group>"; };
+		74CAC1637A822CA5CD6FABBA /* Pods-IDCAdBlockControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlockControl.debug.xcconfig"; path = "Target Support Files/Pods-IDCAdBlockControl/Pods-IDCAdBlockControl.debug.xcconfig"; sourceTree = "<group>"; };
+		B2AA3F692E3A0F29E5300683 /* Pods-IDCAdBlockData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDCAdBlockData.debug.xcconfig"; path = "Target Support Files/Pods-IDCAdBlockData/Pods-IDCAdBlockData.debug.xcconfig"; sourceTree = "<group>"; };
 		FA68F2651FF84C520042840D /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		FA68F26E1FF85A510042840D /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		FA68F2731FF85E190042840D /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -238,6 +251,7 @@
 		FAA2F6461FF57F9600FA15C4 /* NetCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCache.swift; sourceTree = "<group>"; };
 		FABDA3C81FFEE1940077C681 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		FABDA3CA1FFEE8B90077C681 /* StaticRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticRules.swift; sourceTree = "<group>"; };
+		FB4D9251D65F132A7A057CEC /* Pods_IDCAdBlockControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDCAdBlockControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +262,7 @@
 				4FF3BE9D23EDB28E009908DD /* Moya in Frameworks */,
 				FAA2F55F1FEEF36E00FA15C4 /* NetworkExtension.framework in Frameworks */,
 				4F8E474024067A79002FB279 /* KeychainAccess in Frameworks */,
+				16A86B020A1054AB806068B9 /* Pods_IDCAdBlock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +273,7 @@
 				4FF3BE9F23EDB294009908DD /* Moya in Frameworks */,
 				FAA2F5711FEEF51D00FA15C4 /* NetworkExtension.framework in Frameworks */,
 				4F8E474224067A8B002FB279 /* KeychainAccess in Frameworks */,
+				6EE5A8819592783C49FB5BE8 /* Pods_IDCAdBlockData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +284,7 @@
 				4FF3BEA123EDB299009908DD /* Moya in Frameworks */,
 				FAA2F5821FEEF53C00FA15C4 /* NetworkExtension.framework in Frameworks */,
 				4F8E474424067A91002FB279 /* KeychainAccess in Frameworks */,
+				63E484E8AA7F70E4B426B09A /* Pods_IDCAdBlockControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +335,19 @@
 			path = "API Services";
 			sourceTree = "<group>";
 		};
+		ECF64CD02269AF10EEC566BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03B159D8DEB1C54560908048 /* Pods-IDCAdBlock.debug.xcconfig */,
+				054459064F07DAF2A4635790 /* Pods-IDCAdBlock.release.xcconfig */,
+				74CAC1637A822CA5CD6FABBA /* Pods-IDCAdBlockControl.debug.xcconfig */,
+				529634ECB67F422361F171D7 /* Pods-IDCAdBlockControl.release.xcconfig */,
+				B2AA3F692E3A0F29E5300683 /* Pods-IDCAdBlockData.debug.xcconfig */,
+				4770863F366E0BEB1F9A23F6 /* Pods-IDCAdBlockData.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAA2F5381FEEF25B00FA15C4 = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +356,7 @@
 				FAA2F5771FEEF53000FA15C4 /* IDCAdBlockControl */,
 				FAA2F5421FEEF25B00FA15C4 /* Products */,
 				FAA2F55D1FEEF36E00FA15C4 /* Frameworks */,
+				ECF64CD02269AF10EEC566BC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -342,6 +373,7 @@
 		FAA2F5431FEEF25B00FA15C4 /* IDCAdBlock */ = {
 			isa = PBXGroup;
 			children = (
+				4F0C9ABA241901A20052FDDE /* GoogleService-Info.plist */,
 				FAA2F55C1FEEF34C00FA15C4 /* IDCAdBlock.entitlements */,
 				FAA2F5BB1FEF1C6E00FA15C4 /* SiftDataModel.xcdatamodeld */,
 				FAA2F5531FEEF25B00FA15C4 /* Info.plist */,
@@ -384,6 +416,9 @@
 				FAA2F55E1FEEF36E00FA15C4 /* NetworkExtension.framework */,
 				FAA2F5DE1FF48E9500FA15C4 /* UserNotifications.framework */,
 				FAA2F5E01FF48E9500FA15C4 /* UserNotificationsUI.framework */,
+				0E4B4DBAA02389FA5A98D70A /* Pods_IDCAdBlock.framework */,
+				FB4D9251D65F132A7A057CEC /* Pods_IDCAdBlockControl.framework */,
+				1D3AB9CC2EAB08E77FDCC6AE /* Pods_IDCAdBlockData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -524,11 +559,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F5561FEEF25B00FA15C4 /* Build configuration list for PBXNativeTarget "IDCAdBlock" */;
 			buildPhases = (
+				957CB08FCD05435C49372B97 /* [CP] Check Pods Manifest.lock */,
 				FAA2F5CC1FEF707100FA15C4 /* Common Crypto */,
 				FAA2F53D1FEEF25B00FA15C4 /* Sources */,
 				FAA2F53E1FEEF25B00FA15C4 /* Frameworks */,
 				FAA2F53F1FEEF25B00FA15C4 /* Resources */,
 				FAA2F5701FEEF51200FA15C4 /* Embed App Extensions */,
+				8981AD6BF37E09B5998CF336 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -549,6 +586,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F56D1FEEF51200FA15C4 /* Build configuration list for PBXNativeTarget "IDCAdBlockData" */;
 			buildPhases = (
+				FAD043084581E904277A480E /* [CP] Check Pods Manifest.lock */,
 				FAA2F5CD1FEF711900FA15C4 /* Common Crypto */,
 				FAA2F5601FEEF51100FA15C4 /* Sources */,
 				FAA2F5611FEEF51100FA15C4 /* Frameworks */,
@@ -571,6 +609,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2F57F1FEEF53100FA15C4 /* Build configuration list for PBXNativeTarget "IDCAdBlockControl" */;
 			buildPhases = (
+				968016CBB8A6D02825121A8F /* [CP] Check Pods Manifest.lock */,
 				FAA2F5CE1FEF712800FA15C4 /* Common Crypto */,
 				FAA2F5721FEEF53000FA15C4 /* Sources */,
 				FAA2F5731FEEF53000FA15C4 /* Frameworks */,
@@ -601,7 +640,6 @@
 				TargetAttributes = {
 					FAA2F5401FEEF25B00FA15C4 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -619,7 +657,6 @@
 					};
 					FAA2F5631FEEF51100FA15C4 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -631,7 +668,6 @@
 					};
 					FAA2F5751FEEF53000FA15C4 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -726,6 +762,7 @@
 				FAA2F54F1FEEF25B00FA15C4 /* Assets.xcassets in Resources */,
 				FAA2F59E1FEEF7F700FA15C4 /* FiraMono-Regular.ttf in Resources */,
 				FAA2F5AD1FEEF7F700FA15C4 /* OFL.txt in Resources */,
+				4F0C9ABB241901A20052FDDE /* GoogleService-Info.plist in Resources */,
 				FAA2F5A41FEEF7F700FA15C4 /* FiraSans-Medium.ttf in Resources */,
 				FAA2F5A61FEEF7F700FA15C4 /* FiraSans-Bold.ttf in Resources */,
 				FAA2F54A1FEEF25B00FA15C4 /* Main.storyboard in Resources */,
@@ -752,6 +789,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8981AD6BF37E09B5998CF336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDCAdBlock/Pods-IDCAdBlock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDCAdBlock/Pods-IDCAdBlock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDCAdBlock/Pods-IDCAdBlock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		957CB08FCD05435C49372B97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDCAdBlock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		968016CBB8A6D02825121A8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDCAdBlockControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FAA2F5CC1FEF707100FA15C4 /* Common Crypto */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -796,6 +894,28 @@
 			shellPath = /bin/sh;
 			shellScript = "
 ";
+		};
+		FAD043084581E904277A480E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDCAdBlockData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1050,12 +1170,14 @@
 		};
 		FAA2F5571FEEF25B00FA15C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B159D8DEB1C54560908048 /* Pods-IDCAdBlock.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlock/IDCAdBlock.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1065,6 +1187,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock;
 				PRODUCT_NAME = IPTracker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1072,12 +1195,14 @@
 		};
 		FAA2F5581FEEF25B00FA15C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054459064F07DAF2A4635790 /* Pods-IDCAdBlock.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlock/IDCAdBlock.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1087,6 +1212,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock;
 				PRODUCT_NAME = IPTracker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1094,10 +1220,12 @@
 		};
 		FAA2F56E1FEEF51200FA15C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2AA3F692E3A0F29E5300683 /* Pods-IDCAdBlockData.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockData/IDCAdBlockData.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1108,6 +1236,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock.Data;
 				PRODUCT_NAME = IDCAdBlockData;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1116,10 +1245,12 @@
 		};
 		FAA2F56F1FEEF51200FA15C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4770863F366E0BEB1F9A23F6 /* Pods-IDCAdBlockData.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockData/IDCAdBlockData.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1130,6 +1261,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock.Data;
 				PRODUCT_NAME = IDCAdBlockData;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1138,10 +1270,12 @@
 		};
 		FAA2F5801FEEF53100FA15C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CAC1637A822CA5CD6FABBA /* Pods-IDCAdBlockControl.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1152,6 +1286,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock.Control;
 				PRODUCT_NAME = IDCAdBlockControl;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1160,10 +1295,12 @@
 		};
 		FAA2F5811FEEF53100FA15C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529634ECB67F422361F171D7 /* Pods-IDCAdBlockControl.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = IDCAdBlockControl/IDCAdBlockControl.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 5PT8CRKKZ9;
 				INFOPLIST_FILE = IDCAdBlockControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1174,6 +1311,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idc.ac.il.idcAdBLock.Control;
 				PRODUCT_NAME = IDCAdBlockControl;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

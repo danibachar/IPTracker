@@ -24,13 +24,14 @@ final class IPReporter {
     }()
     
     private lazy var encoder = JSONEncoder()
-    
+    private let buildNumber = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
     func send(ips: [String], connectionTypeName: String?, completion: ((_ error: Error?) -> Void)?) {
         let validIpsString = ips
             .filter(validIp)
             .sorted()
             .joined(separator: ",")
-        let string = "\(Constants.deviceIdentifier)|\(connectionTypeName ?? "UNDEFINED")|[\(validIpsString)]"
+        
+        let string = "\(Constants.deviceIdentifier)|\(connectionTypeName ?? "UNDEFINED")|(build:\(buildNumber)|[\(validIpsString)]"
         guard let data = try? JSONEncoder().encode(string) else {
             completion?(NSError(domain: "Faild Converting String to data", code: 2, userInfo: nil))
             return

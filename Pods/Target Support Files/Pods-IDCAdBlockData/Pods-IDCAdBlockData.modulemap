@@ -1,0 +1,6 @@
+framework module Pods_IDCAdBlockData {
+  umbrella header "Pods-IDCAdBlockData-umbrella.h"
+
+  export *
+  module * { export * }
+}

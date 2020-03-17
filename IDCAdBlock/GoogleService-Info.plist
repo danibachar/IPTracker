@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>686024765018-333hekjkao56sjnl84fkhob1fkf2fghd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.686024765018-333hekjkao56sjnl84fkhob1fkf2fghd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyASJ_cJE8okTGtXGWxkltaR3l4pOVN0XLw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>686024765018</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>idc.ac.il.idcAdBLock</string>
+	<key>PROJECT_ID</key>
+	<string>iptracker-ae683</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iptracker-ae683.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:686024765018:ios:62dbb52882e3ed9f4df263</string>
+	<key>DATABASE_URL</key>
+	<string>https://iptracker-ae683.firebaseio.com</string>
+</dict>
+</plist>
